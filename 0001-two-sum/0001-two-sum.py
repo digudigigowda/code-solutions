@@ -1,9 +1,20 @@
 class Solution:
-    def twoSum(self, n: List[int], p: int) -> List[int]:
-        for i in range (len(n)-1):
-            for j in range (i+1,len(n)):
-                if n[i]+n[j]==p:
-                    return[i,j]
+    def twoSum(self, n: List[int], t: int) -> List[int]:
+
+       d={}
+       for i in range(len(n)):
+           c=t-n[i]
+           if c in d:
+              return (d[c],i)
+           d[n[i]]=i
+
+
+
+        
+
+
+
+        
 
         
 
